@@ -27,3 +27,4 @@ if (min1 == -1 || costs[i][j] < costs[i][min1]) {
 }
     return costs[n - 1][min1];
 }
+
