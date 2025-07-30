@@ -3,11 +3,11 @@ public class Solution {
         int m = board.length;
         int n = board[0].length;
         boolean[][] visited = new boolean[m][n];
-        boolean result = false;
+        boolean result = false;     // initial false 
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 if (board[i][j] == word.charAt(0)) {
-                    result = backtrack(board, word, visited, i, j, 0);
+                    result = backtrack(board, word, visited, i, j, 0);   // 6 parameters for backtracking
                     if (result) return true;
                 }
             }
@@ -22,7 +22,7 @@ public class Solution {
             return false;
         }
         visited[i][j] = true;
-        if (backtrack(board, word, visited, i + 1, j, index + 1) ||
+        if (backtrack(board, word, visited, i + 1, j, index + 1) ||   //  using backtracking 
             backtrack(board, word, visited, i - 1, j, index + 1) ||
             backtrack(board, word, visited, i, j + 1, index + 1) ||
             backtrack(board, word, visited, i, j - 1, index + 1)) {
