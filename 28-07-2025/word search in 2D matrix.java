@@ -22,7 +22,7 @@ public class Solution {
             return false;
         }
         visited[i][j] = true;
-        if (backtrack(board, word, visited, i + 1, j, index + 1) ||   //  using backtracking 
+        if (backtrack(board, word, visited, i + 1, j, index + 1) ||   //  using backtracking   
             backtrack(board, word, visited, i - 1, j, index + 1) ||
             backtrack(board, word, visited, i, j + 1, index + 1) ||
             backtrack(board, word, visited, i, j - 1, index + 1)) {
