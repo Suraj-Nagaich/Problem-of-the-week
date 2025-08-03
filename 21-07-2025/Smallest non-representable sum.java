@@ -5,7 +5,7 @@ class Solution {
             sum+=nums[i];
         }
         if(sum%2!=0) return false;
-        sum/=2;
+        sum/=2;                             // divide the sum by 2
         boolean dp[]=new boolean[sum+1];
         dp[0]=true;
         for (int num : nums) {
@@ -14,7 +14,7 @@ class Solution {
                 if (dp[sum]) return true;
             }
         }
-        return dp[sum];
+        return dp[sum];      // return the dp of sum
 }
 }
 
