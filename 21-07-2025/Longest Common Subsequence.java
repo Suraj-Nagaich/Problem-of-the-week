@@ -2,11 +2,11 @@ class Solution {
     int f(int ind1, int ind2, String s1, String s2)
     {
         if(ind1<0 || ind2<0) return 0;
-        if(s1.charAt(ind1)==s2.charAt(ind2))
+        if(s1.charAt(ind1)==s2.charAt(ind2))                     
         return (1+f(ind1-1,ind2-1,s1,s2));
         return Math.max(f(ind1-1,ind2, s1, s2), f(ind1,ind2-1,s1,s2));
     }
     public int longestCommonSubsequence(String text1, String text2) {
-        return f(text1.length()-1, text2.length()-1, text1, text2);
+        return f(text1.length()-1, text2.length()-1, text1, text2);          // by using recursive call
     }
 }
