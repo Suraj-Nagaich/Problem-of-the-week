@@ -2,7 +2,7 @@ class Solution {
     boolean[] visited;
     int n;
     int[][] grid;
-    public void dfs(int x){
+    public void dfs(int x){            // using dfs algorithm
         visited[x]=true;
         for(int i=0;i<this.n;i++){
             if(grid[x][i]==1 && visited[i]==false){
@@ -12,7 +12,7 @@ class Solution {
     }
     public int findCircleNum(int[][] isConnected) {
         this.grid=isConnected;
-        this.n = grid.length;
+        this.n = grid.length;                     // check either friend group is connected
         int ans=0;
         this.visited = new boolean[this.n];
         for(int i=0;i<this.n;i++){
