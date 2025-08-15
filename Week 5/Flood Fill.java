@@ -11,8 +11,8 @@ class Solution {
         int n = image.length;
         int m = image[0].length;
         int initialColor = image[sr][sc];
-        if (initialColor == color) return image;
-        Queue<Pair> q = new LinkedList<>();
+        if (initialColor == color) return image;           // return image where initial colour becomes parallel to colour
+        Queue<Pair> q = new LinkedList<>();   // Make a queue of linkedlist
         q.add(new Pair(sr,sc));
         image[sr][sc] = color;
         int[] temprow = {1,-1,0,0};
