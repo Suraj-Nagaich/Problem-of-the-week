@@ -1,7 +1,7 @@
 class Solution {
     int gb=Integer.MIN_VALUE;
     public int maxPathSum(TreeNode root) {
-        if(root==null){
+        if(root==null){               // check whether the root is null or not
             return 0;
         }
         path(root);
@@ -11,7 +11,7 @@ class Solution {
         if(root==null){
             return 0;
         }
-        int l=Math.max(0,path(root.left));
+        int l=Math.max(0,path(root.left));          // by using recursion
         int r=Math.max(0,path(root.right));
         gb=Math.max(gb,root.val+l+r);
         return root.val+Math.max(l,r);
