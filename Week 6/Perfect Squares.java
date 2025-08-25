@@ -1,5 +1,5 @@
 class Solution {
-    int[] memo;
+    int[] memo;             //using memoization
     public int numSquares(int n) {
         memo = new int[n+1];
         Arrays.fill(memo, -1);
@@ -7,7 +7,7 @@ class Solution {
     }
     public int solve(int n) {
         if(n == 0) return 0;
-        if(n < 0) return Integer.MAX_VALUE;
+        if(n < 0) return Integer.MAX_VALUE;    // return the maximum value 
         if(memo[n] != -1) return memo[n];
         int ans = Integer.MAX_VALUE;
         for(int i=1;i*i<=n;i++) {
