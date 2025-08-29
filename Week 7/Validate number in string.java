@@ -3,8 +3,8 @@ class Solution {
         boolean num = false, exp = false, sign = false, dec = false;
         for (int i = 0; i < S.length(); i++) {
             char c = S.charAt(i);
-            if (c >= '0' && c <= '9') num = true ;    
-            else if (c == 'e' || c == 'E')
+            if (c >= '0' && c <= '9') num = true ;            //if number is between 0 to 9 
+            else if (c == 'e' || c == 'E')                    // if number lies between e and E
                 if (exp || !num) return false;
                 else {
                     exp = true;
@@ -20,6 +20,6 @@ class Solution {
                 else dec = true;
             else return false;
         }
-        return num;
+        return num;                                      // return number present in string
     }
 }
