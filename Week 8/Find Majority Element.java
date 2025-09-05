@@ -1,6 +1,6 @@
 class Solution {
     public int majorityElement(int[] nums) {
-        return sol(nums);   
+        return sol(nums);                               // return majority element
     }
     public static int sol(int arr[])
     {
@@ -9,7 +9,7 @@ class Solution {
         int i=0;
         while(i<arr.length)
         {
-            if(cnt==0)
+            if(cnt==0)                                       // using the binary search approach
             {
                 cnt=1;
                 val=arr[i];
