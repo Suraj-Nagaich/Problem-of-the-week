@@ -1,1 +1,1 @@
-# Problem-of-the-week
+* Problem-of-the-week
